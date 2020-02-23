@@ -1,0 +1,96 @@
+
+<html lang=en>
+<head>
+<title>Two Hats Guessing Game</title>
+<style>
+   h1 { 
+      text-align:center;
+   }
+   table {
+      margin:auto; 
+      width:400px;
+   }
+   td {
+      width:50%;
+   }
+</style>
+<script>
+   function clearTheGuesses() {
+      document.getElementById("guess01").innerHTML = "";
+      document.getElementById("guess02").innerHTML = "";
+   }
+
+   function makeTheGuesses() {
+   prefix = "My hat color is ";
+   postfix = ".";
+      theSelectElement = document.getElementById("player02");
+      document.getElementById("guess01").innerHTML =
+         prefix +
+         theSelectElement.options[theSelectElement.selectedIndex].text +
+         postfix;
+
+      document.getElementById("guess02").innerHTML = prefix;
+      if (document.getElementById("player01red").checked) {
+         document.getElementById("guess02").innerHTML += "Blue";
+      } else {
+         document.getElementById("guess02").innerHTML += "Red";
+      }
+      document.getElementById("guess02").innerHTML += postfix;
+   }
+</script>
+</head>
+
+<body>
+<h1>Two Hats Guessing Game</h1>
+<div 
+ style="position:absolute; top:48; left:50%; border-left:2px solid black; largin-left:-1px; height:100%; z-index:-1;">
+</div>
+<table>
+<tr>
+   <td style="text-align:left; vertical-align:top;">
+   Player One's Value
+   <br> 
+   <input type="radio" onchange="clearTheGuesses();"
+          name="player01" id="player01red" value="red" 
+          checked="checked"> 
+          <label for="player01red"> Red</label>
+   <br>
+   <input type="radio" onchange="clearTheGuesses();"
+          name="player01" id="player01blue" value="blue"> 
+          <label for="player01blue"> Blue</label>
+   </td>
+
+   <td style="text-align:right; vertical-align:top;">
+   Player Two's Value
+   <br> 
+   <select onchange="clearTheGuesses();" id="player02">
+   <option value="red" selected="true">Red</option>
+   <option value="blue">Blue</option>
+   </select>
+   </td>
+</tr>
+<tr>
+   <td colspan=2 style="text-align:center;">
+   <button type="button" onclick="makeTheGuesses();">
+   Have Computer Make Guesses<br>Exactly One Will Be Correct
+   </button>
+   </td>
+</tr>
+<tr><td colspan=2><br><br><br></td></tr>
+<tr>
+   <td style="text-align:left;" id="guess01">
+   <!-- the guess for player01 will appear here -->
+   </td>
+
+   <td style="text-align:right;" id="guess02">
+   <!-- the guess for player02 will appear here -->
+   </td>
+</tr>
+</table>
+   
+
+
+
+
+</body>
+</html>
