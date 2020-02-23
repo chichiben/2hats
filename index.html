@@ -66,10 +66,14 @@
    <td style="text-align:right; vertical-align:top;">
    Player Two's Value
    <br> 
-   <select onchange="clearTheGuesses();" id="player02">
-   <option value="red" selected="true">Red</option>
-   <option value="blue">Blue</option>
-   </select>
+   <input type="radio" onchange="clearTheGuesses();"
+          name="player02" id="player02red" value="red" 
+          checked="checked"> 
+          <label for="player02red"> Red</label>
+   <br>
+   <input type="radio" onchange="clearTheGuesses();"
+          name="player02" id="player02blue" value="blue"> 
+          <label for="player02blue"> Blue</label>    
    </td>
 </tr>
 <tr>
