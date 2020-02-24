@@ -26,11 +26,14 @@
    function makeTheGuesses() {
    prefix = "My hat color is ";
    postfix = ".";
-      theSelectElement = document.getElementById("player02");
-      document.getElementById("guess01").innerHTML =
-         prefix +
-         theSelectElement.options[theSelectElement.selectedIndex].text +
-         postfix;
+      
+      document.getElementById("guess01").innerHTML = prefix;
+      if (document.getElementById("player02red").checked) {
+         document.getElementById("guess01").innerHTML += "Red";
+      } else {
+         document.getElementById("guess01").innerHTML += "Blue";
+      }
+      document.getElementById("guess01").innerHTML += postfix;
 
       document.getElementById("guess02").innerHTML = prefix;
       if (document.getElementById("player01red").checked) {
