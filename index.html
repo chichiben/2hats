@@ -48,20 +48,20 @@
       document.getElementById("guess01").innerHTML = prefix;
       if (document.getElementById("player02red").checked) {
          document.getElementById("guess01").innerHTML += "Red";
-         document.getElementById("left-td").style.backgroundColor = "#ffcccb";
+         document.getElementById("guess01").style.backgroundColor = "#ffcccb";
       } else {
          document.getElementById("guess01").innerHTML += "Blue";
-         document.getElementById("left-td").style.backgroundColor = "#cce6ff";
+         document.getElementById("guess01").style.backgroundColor = "#cce6ff";
       }
       document.getElementById("guess01").innerHTML += postfix;
 
       document.getElementById("guess02").innerHTML = prefix;
       if (document.getElementById("player01red").checked) {
          document.getElementById("guess02").innerHTML += "Blue";
-         document.getElementById("right-td").style.backgroundColor = "#cce6ff";
+         document.getElementById("guess02").style.backgroundColor = "#cce6ff";
       } else {
          document.getElementById("guess02").innerHTML += "Red";
-         document.getElementById("right-td").style.backgroundColor = "#ffcccb";
+         document.getElementById("guess02").style.backgroundColor = "#ffcccb";
       }
       document.getElementById("guess02").innerHTML += postfix;
    }
