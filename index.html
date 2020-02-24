@@ -14,6 +14,10 @@
    td {
       width:50%;
    }
+   
+   tr {
+      font-family:sans-serif;   
+   }
 </style>
 <script>
    function clearTheGuesses() {
@@ -45,14 +49,14 @@
 </head>
 
 <body>
-<h1>Two Hats Guessing Game</h1>
+<h1>Two Hats</h1>
 <div 
  style="position:absolute; top:48; left:50%; border-left:2px solid black; largin-left:-1px; height:100%; z-index:-1;">
 </div>
 <table>
 <tr>
    <td style="text-align:left; vertical-align:top;">
-   Player One's Value
+   Guess Player One
    <br> 
    <input type="radio" onchange="clearTheGuesses();"
           name="player01" id="player01red" value="red" 
@@ -65,7 +69,7 @@
    </td>
 
    <td style="text-align:right; vertical-align:top;">
-   Player Two's Value
+   Guess Player Two
    <br> 
    <input type="radio" onchange="clearTheGuesses();"
           name="player02" id="player02red" value="red" 
